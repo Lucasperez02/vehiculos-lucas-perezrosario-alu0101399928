@@ -1,0 +1,6 @@
+
+___Función alquiler_por_dia(dias, vehiculo)___
+*Realizada la primera función que calcula el precio de un vehiculo por días.
+*En la función, si es un vehiculo (1) se multiplica el número de días por 20 y si
+*es un turismo (2) se multiplica el número de días por 35
+
