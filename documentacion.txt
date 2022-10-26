@@ -8,3 +8,7 @@ ___Función precio_con_descuento(dias, vehiculos)___
 *En esta función se calculará el precio que costará un vehiculo con cierto precio_con_descuento
 *Para las motos se restará al precio total (calculado con la función anterior) un descuento de un 15%
 *Para los turismos se restará al precio total un descuento de un 20%
+
+___Función total_kilometros(odometro_inicio, odometro_fin)___
+*En esta función se calculará los kilometros que se han recorrido de un vehículo
+*Para esto se resta a los kilometros del odómetro final los kilometros del odómetro inicial
