@@ -9,8 +9,12 @@ class TestVehiculos < Test:Unit:TestCase
     end
     
     def test_alquiler_con_descuento (dias, vehiculo)
-        assert_equal(51, alquiler_con_descuento(3, 1))
-        assert_equal(84, alquiler_con_descuento(3, 2))
-    end    
+        assert_equal(51, precio_con_descuento(3, 1))
+        assert_equal(84, precio_con_descuento(3, 2))
+    end
+
+    def test_total_kilometros (odometro_inicio, odometro_fin)
+        assert_equal(150, total_kilometros(100, 250))
+    end
 
 end
