@@ -18,3 +18,7 @@ def precio_con_descuento(dias, vehiculo)
     end
   
 end
+
+def total_kilometros (odometro_inicio, odometro_fin)
+    kilometros = odometro_fin - odometro_inicio
+end
