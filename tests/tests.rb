@@ -1,5 +1,5 @@
 require 'test/unit'
-require 'lib/funciones.rb'
+require 'lib/funciones'
 
 class TestVehiculos < Test::Unit::TestCase
 
