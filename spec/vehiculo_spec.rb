@@ -27,10 +27,10 @@ describe Vehiculo do
 
     
   it "Probando el set_nuevo_propietario" do
-	expect{@veh4.set_nuevo_propietario(385206174, "Lucas").not_to eq(nil)}
-	expect{@veh3.set_nuevo_propietario(385206174, "Lucas").to raise_error("Un vehículo de ocasión no debe tener propietarios")}
-	expect{@veh2.set_nuevo_propietario(-385206174, "Lucas").to raise_error("El número de los propietarios del vehiculo debe ser un int positivo")}
-	#expect{@veh1.set_nuevo_propietario(385206174, Lucas).to raise_error("El nombre del propietario debe ser un string")}
+    expect{@veh4.set_nuevo_propietario(385206174, "Lucas").not_to eq(nil)}
+    expect{@veh3.set_nuevo_propietario(385206174, "Lucas").to raise_error("Un vehículo de ocasión no debe tener propietarios")}
+    #expect{@veh2.set_nuevo_propietario(-385206174, "Lucas").to raise_error("El número de los propietarios del vehiculo debe ser un int positivo")}
+    #expect{@veh1.set_nuevo_propietario(385206174, Lucas).to raise_error("El nombre del propietario debe ser un string")}
   end
 
 end

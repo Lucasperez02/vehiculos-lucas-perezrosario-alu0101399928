@@ -36,22 +36,27 @@ class Vehiculo
 		raise Exception.new("El precio del vehiculo debe ser un int positivo y distinto de 0")
 	  end
 	  #Excepciones para los propietarios
-	  if vehiculo_ocasion == false
-	# 	propietarios.each do |i|
-	#   		if not propietarios[i][0].is_a? Integer or propietarios[i][0] < 0
-	# 			raise Exception.new("El número de los propietarios del vehiculo debe ser un int positivo")
-	#   		end
-	#   		if not propietarios[i][1].class == String
-	# 			raise Exception.new("El nombre del propietario debe ser un string")
-	#   		end			
-	# 	end
-	#   else
-		if not propietarios.empty?
+	  if vehiculo_ocasion == true
+		if propietarios.empty? == false
 			raise Exception.new("Un vehículo de ocasión no debe tener propietarios")
-		end
-	  end
+		end	
+	  end	
+	#   if vehiculo_ocasion == false
+	# # 	propietarios.each do |i|
+	# #   		if not propietarios[i][0].is_a? Integer or propietarios[i][0] < 0
+	# # 			raise Exception.new("El número de los propietarios del vehiculo debe ser un int positivo")
+	# #   		end
+	# #   		if not propietarios[i][1].class == String
+	# # 			raise Exception.new("El nombre del propietario debe ser un string")
+	# #   		end			
+	# # 	end
+	# #   else
+	# 	if not propietarios.empty?
+	# 		raise Exception.new("Un vehículo de ocasión no debe tener propietarios")
+	# 	end
+	#   end
 	  #Excepciones para vehiculo_ocasion
-	  if not vehiculo_ocasion.in? [true,false]
+	  if not vehiculo_ocasion == true and not vehiculo_ocasion == false
 		raise Exception.new("El vehiculo_ocasion del vehiculo debe ser un booleano")
 	  end
 	  #Excepciones para tipo_galon
@@ -66,5 +71,21 @@ class Vehiculo
 	  @mpg, @tipo_galon = mpg, tipo_galon
 	end
 
+	#Setters de algunas de las variables de instancia
+
+	def set_nuevo_propietario(numero, nombre)
+	  if vehiculo_ocasion == false
+	  	if not numerois_a? Numeric or numero < 0
+			raise Exception.new("El número de los propietarios del vehiculo debe ser un int positivo")
+	  	end
+	  	if not nombre.class == String
+			raise Exception.new("El nombre del propietario debe ser un string")
+	  	end			
+
+	  else
+		raise Exception.new("No se puede añadir propietarios a un vehiculo de ocasión")
+	  end
+	  @propietarios.push([numero, nombre])
+	end
 
 end
