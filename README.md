@@ -15,4 +15,6 @@ En el initialize, haciendo uso de excepciones, se comprueba que las variables cu
 Segundo commit después de haber definido las expectativas para la función de insertar un nuevo propietario y también el propio método en la clase
 Vehiculo. Este método inserta un nuevo propietario siempre que no sea un vehiculo de ocasión.
 
-
+## Expectativas probando la función to_s y desarrollo del propio método
+Tercer commit después de definir las expectativas para el to_s y también el desarrollo del método en la clase Vehiculo
+El método sirve para mostrar la información del vehiculo como string
