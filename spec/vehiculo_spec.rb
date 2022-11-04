@@ -2,7 +2,7 @@ require 'Vehiculo'
 
 describe Vehiculo do
     before (:all) do
-    #   @veh1 = Vehiculo.new(33245, "Volkswagen", 1988, "GTI MK2", 39.8, 2000, [[333333333, "Pedro"],[123321123, "Ana"]], false, "UK")
+        @veh1 = Vehiculo.new(33245, "Volkswagen", 1988, "GTI MK2", 39.8, 2000, [[333333333, "Pedro"],[123321123, "Ana"]], false, "UK")
         @veh2 = Vehiculo.new(58723, "Volkswagen", 2022, "Polo Startline", 35.2, 50000, [[765456982, "Andrés"]], false, "UK")
         @veh3 = Vehiculo.new(90415, "Volkswagen", 2019, "T-Cross", 30.5, 24600, [], true, "USA")
         @veh4 = Vehiculo.new(23145, "Volkswagen", 2017, "Polo VI", 40.0, 7000, [[333333333, "Pedro"],[123321123, "Ana"],[679876123, "Diana"]], false, "UK")
@@ -31,6 +31,11 @@ describe Vehiculo do
     expect{@veh3.set_nuevo_propietario(385206174, "Lucas").to raise_error("Un vehículo de ocasión no debe tener propietarios")}
     #expect{@veh2.set_nuevo_propietario(-385206174, "Lucas").to raise_error("El número de los propietarios del vehiculo debe ser un int positivo")}
     #expect{@veh1.set_nuevo_propietario(385206174, Lucas).to raise_error("El nombre del propietario debe ser un string")}
+  end
+
+  it "Probando función to_s" do
+    expect{@vh1.to_s.to eq{"Vehiculo: 33245, Volkswagen, 1988, GTI MK2, 39.8, 2000, [[333333333, Pedro],[123321123, Ana]], false, UK"}}
+    expect{@vh3.to_s.to eq{"Vehiculo: 90415, Volkswagen, 2019, T-Cross, 30.5, 24600, [], true, USA"}}
   end
 
 end
