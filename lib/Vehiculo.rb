@@ -88,4 +88,9 @@ class Vehiculo
 	  @propietarios.push([numero, nombre])
 	end
 
+	#Función para mostrar el objeto
+	def to_s
+		"Vehiculo: #{@id}, #{@fabricante}, #{@año}, #{@modelo}, #{@mpg}, #{@precio}, #{@propietarios}, vehiculo_ocasion: #{@vehiculo_ocasion}, tipo_galon: #{@tipo_galon}"
+	end
+
 end
