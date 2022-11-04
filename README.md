@@ -18,3 +18,7 @@ Vehiculo. Este método inserta un nuevo propietario siempre que no sea un vehicu
 ## Expectativas probando la función to_s y desarrollo del propio método
 Tercer commit después de definir las expectativas para el to_s y también el desarrollo del método en la clase Vehiculo
 El método sirve para mostrar la información del vehiculo como string
+
+## Expectativa probando la función distancia_x_combustible y desarrollo del propio vehiculo
+Cuarto commit después de definir las expectativas para distancia_x_combustible y desarrollo de la propia función
+Esta función calcula la distancia que podrá recorrer un coche utilizando una cantidad de combustible. A la función se le pasará la cantidad y la unidad de medida del combustible y dependiendo de si es litros o galones y de si mpg del vehiculo están definidas como de USA o de UK calculará la distancia.
