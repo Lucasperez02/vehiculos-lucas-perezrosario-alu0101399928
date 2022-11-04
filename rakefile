@@ -1,0 +1,11 @@
+task :default => :noformat
+
+desc "Expectativas con formato simple"
+task :noformat do
+    sh "rspec spec/vehiculo_spec.rb"
+end
+
+desc "Expectativas con formato extendido"
+task :doc do
+    sh "rspec spec/vehiculo_spec.rb --format doc"
+end
