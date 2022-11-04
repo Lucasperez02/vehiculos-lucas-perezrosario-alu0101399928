@@ -46,7 +46,7 @@ class Vehiculo
 	  		end			
 		end
 	  else
-		if propietario not [ ]
+		if not propietario.empty
 			raise Exception.new("Un vehículo de ocasión no debe tener propietarios")
 		end
 	  end
@@ -55,7 +55,7 @@ class Vehiculo
 		raise Exception.new("El vehiculo_ocasion del vehiculo debe ser un booleano")
 	  end
 	  #Excepciones para tipo_galon
-	  if not type(tipo_galon) == string or tipo_galon not "UK" and tipo_galon not "USA"
+	  if not type(tipo_galon) == string or not tipo_galon == "UK" and not tipo_galon == "USA"
 		raise Exception.new("El tipo_galon del vehiculo debe ser una string 'UK' o 'USA'")
 	  end
 	  # INICIALIZANDO VARIABLES DE INSTANCIA 
