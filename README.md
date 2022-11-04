@@ -5,3 +5,4 @@ setter y una función para calcular la autonomía del coche según una cantidad 
 La clase vehiculo tendrá como atributos: id, fabricante, modelo, año, precio, propietarios, mpg, una variable que indica si es o no un vehiculo de ocasión y otra
 que indica el tipo de galón utilizado en millas por galón (mpg).
 
+DOCUMENTACIÓN:
