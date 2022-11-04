@@ -39,12 +39,12 @@ describe Vehiculo do
   end
 
   it "Probando función distancia_x_combustible" do
-    expect{@vh3.distancia_x_combustible(-234, :litro).to raise_error("Los valores de la cantidad de combustible debe ser un numero positivo")}
-    expect{@vh3.distancia_x_combustible(234, "galon").to raise_error("La unidad del combustible debe ser un símbolo :litro o :galon")}
-    expect{@vh5.distancia_x_combustible(30, :litro).to eq(216.449496)}
-    expect{@vh5.distancia_x_combustible(30, :galon).to eq(984)}
-    expect{@vh3.distancia_x_combustible(30, :litro).to eq(241,71738)}
-    expect{@vh3.distancia_x_combustible(30, :galon).to eq(915)}
+    expect{@vh3.distancia_x_combustible(-234, "litro").to raise_error("Los valores de la cantidad de combustible debe ser un numero positivo")}
+    expect{@vh3.distancia_x_combustible(234, :galon).to raise_error("La unidad del combustible debe ser un string litro o galon")}
+    expect{@vh5.distancia_x_combustible(30, "litro").to eq(216.449496)}
+    expect{@vh5.distancia_x_combustible(30, "galon").to eq(984)}
+    expect{@vh3.distancia_x_combustible(30, "litro").to eq(241,71738)}
+    expect{@vh3.distancia_x_combustible(30, "galon").to eq(915)}
   end  
 
 end

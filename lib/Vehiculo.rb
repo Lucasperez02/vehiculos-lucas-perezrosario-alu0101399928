@@ -93,4 +93,31 @@ class Vehiculo
 		"Vehiculo: #{@id}, #{@fabricante}, #{@año}, #{@modelo}, #{@mpg}, #{@precio}, #{@propietarios}, vehiculo_ocasion: #{@vehiculo_ocasion}, tipo_galon: #{@tipo_galon}"
 	end
 
+
+	#Función que dada una cantidad de combustible devuelve la distancia que se puede recorrer
+	def distancia_x_combustible (cantidad, unidad_combustible)
+	  if cantidad < 0
+		raise Exception.new("Los valores de la cantidad de combustible debe ser un numero positivo")
+	  end
+	  if not unidad_combustible == "litro" and not unidad_combustible == "galon"
+		raise Exception.new("La unidad del combustible debe ser una string litro o galon")
+	  end
+	  #Autonomía si la cantidad de combistible se da en litros
+	  if unidad_combustible == "litro"
+		if @tipo_galon == "USA"
+		  cantidad * 0.264172 * @mpg
+		elseif @tipo_galon == "UK"
+		  cantidad * 0.219969 * @mpg
+		end
+	  end
+	  #Autonomía si la cantidad de combistible se da en galones
+	  if unidad_combustible == "galon"
+		if @tipo_galon == "USA"
+		  cantidad * @mpg
+		elseif @tipo_galon == "UK"
+		  cantidad * @mpg
+		end		
+	  end
+	end	
+
 end
